@@ -5,7 +5,7 @@ from datetime import datetime
 st.set_page_config(page_title="المدرسة الآمنة", layout="wide")
 
 #image_path = "C:/Users/ultrapc/Desktop/projet/images/logo.png"
-st.logo("/Users/hajar/Desktop/me1/logo.png")
+st.logo("logo.png")
 
 #st.sidebar.markdown("Sidebar content")
 st.markdown("""
