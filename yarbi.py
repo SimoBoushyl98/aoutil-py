@@ -4,8 +4,8 @@ from datetime import datetime
 
 st.set_page_config(page_title="المدرسة الآمنة", layout="wide")
 
-image_path = "C:/Users/ultrapc/Desktop/projet/images/logo.png"
-st.logo("logo.png")
+#image_path = "C:/Users/ultrapc/Desktop/projet/images/logo.png"
+st.logo("/Users/hajar/Desktop/me1/logo.png")
 
 #st.sidebar.markdown("Sidebar content")
 st.markdown("""
@@ -281,7 +281,7 @@ st.markdown("""
     <div style='display: flex; align-items: center; justify-content: center;'>
         <div>
             <h1 style='color: #d32f2f; font-size: 48px;'> المدرسة الآمنة</h1>
-            <p style='font-size: 20px;'> خلية إنصات رقمية تسعى تهدف إلى دعم التلاميذ نفسيا و تربويا لضمان الأمن داخل المؤسسات التعليمية</p>
+            <p style='font-size: 20px;'> خلية إنصات رقمية تسعى إلى دعم التلاميذ نفسيا و تربويا لضمان الأمن داخل المؤسسات التعليمية</p>
         </div>
     </div>
 """, unsafe_allow_html=True)
@@ -504,10 +504,11 @@ elif menu == "فضاء الأستاذ":
                                 <strong style="padding: 15px;border-radius: 14px 0 14px 0;border: 2px solid #ff4747;width: 25%;display: flex;justify-content: center">🛠️ اقتراحات للتدخل التربوي:</strong>
                           </div>
                """, unsafe_allow_html=True)
+               # st.markdown( list(set(info["interventions"])) )
                 st.markdown(f"""
                         <div style="padding: 1.6rem;border-radius: 10px;">
                              <ul style="list-style: circle;">
-                                {''.join([f'<li>{a}</li>' for a in info["interventions"]])}
+                                {''.join([f'<li>{a}</li>' for a in list(set(info["interventions"]))])}
                             </ul>
                          </div>""", unsafe_allow_html=True)
                 #st.markdown("**🛠️ اقتراحات للتدخل التربوي:**")
@@ -522,7 +523,7 @@ elif menu == "فضاء الأستاذ":
                 st.markdown(f"""
                         <div style="padding: 1.6rem;border-radius: 10px;">
                              <ul style="list-style: circle;">
-                                {''.join([f'<li>{a}</li>' for a in info["activities"]])}
+                                {''.join([f'<li>{a}</li>' for a in list(set(info["activities"])) ])}
                             </ul>
                          </div>""", unsafe_allow_html=True)
                 #for a in info["activities"]:
@@ -532,11 +533,11 @@ elif menu == "فضاء الأستاذ":
                                 <strong style="padding: 15px;border-radius: 14px 0 14px 0;border: 2px solid #ff4747;width: 25%;display: flex;justify-content: center">🗣️ كيفية التواصل مع التلميذ:</strong>
                 </div>
                """, unsafe_allow_html=True)
-
+                #st.markdown( list( set(info["communication"]) ) )
                 st.markdown(f"""
                         <div style="padding: 1.6rem;border-radius: 10px;">
                              <ul style="list-style: circle;">
-                                {''.join([f'<li>{a}</li>' for a in info["communication"]])}
+                                {''.join([f'<li>{a}</li>' for a in list( set(info["communication"]) ) ])}
                             </ul>
                          </div>""", unsafe_allow_html=True)
                 #st.markdown("**🗣️ كيفية التواصل مع التلميذ:**")
