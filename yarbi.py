@@ -3,7 +3,6 @@ import pandas as pd
 from datetime import datetime
 
 st.set_page_config(page_title="المدرسة الآمنة", layout="wide")
-
 #image_path = "C:/Users/ultrapc/Desktop/projet/images/logo.png"
 st.logo("logo.png")
 
